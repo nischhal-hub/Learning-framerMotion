@@ -33,12 +33,13 @@ function App() {
         />
       </div>
     
-        <div className='w-[60%] mx-auto relative h-96 overflow-scroll mt-10' ref={containerRef}>
-          <motion.div style={{scaleX}} className='fixed op-2 left-0 right-0 bg-fuchsia-900 h-5 origin-left'></motion.div>
-
+        <div className='w-[60%] mx-auto relative mt-10' >
+          <motion.div style={{scaleX}} className='absolute -top-3 left-0 right-0 bg-fuchsia-900 h-2 origin-left z-50 w-full mx-auto'></motion.div>
+          <div className='overflow-scroll h-96' ref={containerRef}>
           {Array.from({length:20}).map((_,i)=>(
             <p className='mt-2' key={i}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, ratione asperiores. Obcaecati corporis ad vero! Quo animi dignissimos eaque aut! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, sed perferendis architecto accusantium earum consequuntur dolor! Odit placeat accusantium incidunt. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, sunt?</p>
           ))}
+          </div>
           <p></p>
         </div>
     </>
@@ -47,3 +48,4 @@ function App() {
 }
 
 export default App
+ 
